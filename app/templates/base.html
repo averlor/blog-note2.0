@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    TODO: Back style.min.css-->
+    <link rel="shortcut icon"
+          href="{{ url_for('static', filename='img/logo2.ico') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/reset.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>
+        {% block title %}
+        {% endblock %} | Blog-Note
+    </title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="menu">
+                <ul class="menu__links">
+                    <li class="menu__links-li"><a href="#"
+                                  class="menu__links-item active">Главная
+                    </a></li>
+                    <li class="menu__links-li"><a href="#"
+                                           class="menu__links-item">Обо
+                        мне</a></li>
+                    <li
+                            class="menu__links-li"><a href="#"
+                                           class="menu__links-item"></a></li>
+                    <li
+                            class="menu__links-li"><a href="#"
+                                           class="menu__links-item"></a></li>
+                </ul>
+
+                <ul class="menu__social__links">
+                    <li class="menu__social__links-li"><a href="#"
+                                                          class="menu__social__links-item">vk</a></li>
+                    <li class="menu__social__links-li"><a href="#"
+                                                          class="menu__social__links-item">facebook</a></li>
+                    <li class="menu__social__links-li"><a href="#"
+                                                          class="menu__social__links-item">instagram</a></li>
+                </ul>
+
+                <div class="profile">
+                    admin
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="slider">
+                <p>hey</p>
+            </section>
+
+            {% block content %}
+            {% endblock %}
+
+            <aisde class="sidebar">
+                <p>Hey</p>
+            </aisde>
+        </main>
+        <footer class="footer">
+            <p class="copyright">Copyright &copy; 2019</p>
+        </footer>
+    </div>
+</body>
+</html>
